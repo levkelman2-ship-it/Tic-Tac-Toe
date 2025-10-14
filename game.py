@@ -12,7 +12,13 @@ class TicTacToeGame:
                 if self.board[row][col] == '_':
                     available_spaces.append((row,col))
         return available_spaces
-
+    def getAvailableSpots(self, spots):
+        availableCorners = []
+        for row, col in spots:
+            if self.board[row][col] == '_':
+                availableCorners.append((row,col))
+        return availableCorners
+                
     def reset_board(self):
         for row in range(3):
             for col in range(3):

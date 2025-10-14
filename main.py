@@ -11,6 +11,7 @@ def main():
   print("TIC-TAC-TOE!")
   game.reset_board()
   game.print_board()
+
   while True:
     for player in players:
       row, col = player.get_move(game)
