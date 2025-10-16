@@ -23,7 +23,7 @@ def main():
       game.print_board()
       if game.check_win ( player.mark ):
         if player.mark == 'X':
-          Xwins =+1
+          Xwins +=1
         else:
           Owins +=1
         print(f"{player.mark} WINS!")
