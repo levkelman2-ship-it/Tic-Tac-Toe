@@ -60,7 +60,8 @@ class peakAheadAI(Player):
 
         if len(game.getAvailableSpots(Corners)) > 2:
             return random.choice(game.getAvailableSpots(Corners))
-
+        if len(game.getAvailableSpots(Corners)) == 3 and len(game.getAvailableSpots(Edges)) == 3:
+            return random.choice(game.getAvailableSpots(Corners))
         if game.getAvailableSpots(Edges):
             return random.choice(game.getAvailableSpots(Edges))
     
